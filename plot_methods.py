@@ -62,7 +62,7 @@ def plot_3d(px, py, pz):
 
 
 
-def plot_trajectory(accel_csv_path):
+def plot_trajectory(accel_csv_path, func=None):
     """
     High-level function:
     CSV -> trajectory -> plots
@@ -76,7 +76,9 @@ def plot_trajectory(accel_csv_path):
 
     px, py, pz = estimate_trajectory(time, ax, ay, az)
     mag, _ = compute_vector_displacement(time, ax, ay, az)
-    print(mag)
+    
+    if func is not None:
+        func(time, ax, ay, az)
 
     plot_2d(px, py)
     plot_3d(px, py, pz)
