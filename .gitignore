@@ -6,4 +6,3 @@ env/
 
 __pycache__
 data_collection/esp32/build/
-data_collection/esp32/sdkconfig
