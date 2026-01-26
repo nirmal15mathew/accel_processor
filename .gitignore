@@ -5,3 +5,4 @@ ENV/
 env/
 
 __pycache__
+data_collection/esp32/build/
